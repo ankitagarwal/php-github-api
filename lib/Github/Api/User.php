@@ -33,9 +33,8 @@ class Github_Api_User extends Github_Api
      */
     public function show($username)
     {
-        $response = $this->get('user/show/'.urlencode($username));
-
-        return $response['user'];
+        $response = $this->get('users/'.urlencode($username));
+        return $response;
     }
 
     /**

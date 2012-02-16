@@ -65,9 +65,9 @@ class Github_Api_Repo extends Github_Api
      */
     public function show($username, $repo)
     {
-        $response = $this->get('repos/show/'.urlencode($username).'/'.urlencode($repo));
+        $response = $this->get('repos/'.urlencode($username).'/'.urlencode($repo));
 
-        return $response['repository'];
+        return $response;
     }
 
     /**
@@ -327,9 +327,9 @@ class Github_Api_Repo extends Github_Api
      */
     public function getRepoBranches($username, $repo)
     {
-        $response = $this->get('repos/show/'.urlencode($username).'/'.urlencode($repo).'/branches');
+        $response = $this->get('repos/'.urlencode($username).'/'.urlencode($repo).'/branches');
 
-        return $response['branches'];
+        return $response;
     }
 
     /**
